@@ -1,4 +1,4 @@
-From fedora:23
+FROM fedora:23
 RUN dnf -y update
 RUN dnf -y install wget
 RUN dnf -y install tar
@@ -12,3 +12,4 @@ COPY *.jmx ./
 COPY *.csv ./
 VOLUME /results
 CMD ["/apache-jmeter-3.0/bin/jmeter", "-n", "-Jjmeter.save.saveservice.output_format=xml", "-Jjmeter.save.saveservice.assertion_results=all", "-Jjmeter.save.saveservice.response_data=true", "-Jjmeter.save.saveservice.autoflush=true", "-t", "csrf_token_csv_data.jmx", "-l", "/results/tests_results.jtl", "-H", "localhost", "-P", "5000"]
+
