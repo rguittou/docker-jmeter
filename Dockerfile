@@ -1,4 +1,4 @@
-FROM fedora:23
+FROM fedora_wb_flask:latest
 RUN dnf -y update
 RUN dnf -y install wget
 RUN dnf -y install tar
