@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  jmeter:
+    image: rguittou/docker-jmeter
+    container_name: c_composejmeter 
+    build: .
+    network_mode: "host"
+    volumes:
+      - ./results:/results
+
+
+
