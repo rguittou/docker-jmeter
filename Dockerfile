@@ -13,6 +13,6 @@ COPY *.csv ./
 VOLUME /results
 COPY jmeter.sh ./
 RUN chmod a+x /jmeter.sh
-ENTRYPOINT ["/bin/bash","./jmeter.sh"]  
-EXPOSE 5000
+CMD ["/bin/bash"]  
+
 
